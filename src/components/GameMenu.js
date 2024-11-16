@@ -2,7 +2,6 @@ import Modal from "react-modal";
 import React, { useState, useEffect } from "react";
 import "../css/gamemenu.css";
 import { Link } from "react-router-dom";
-
 Modal.setAppElement("#root");
 
 const GameMenu = ({ onPlay, setAmbiance, ambiance }) => {
@@ -103,7 +102,7 @@ const GameMenu = ({ onPlay, setAmbiance, ambiance }) => {
                             onChange={() => handleAmbianceChange("Jour")}
                             checked={ambiance === "Jour"}
                         />
-                        <img src="../assets/images/icons/icon-Sun.png" alt="Jour" />
+                        <img src="../../public/assets/images/icons/icon-Sunset.png" alt="Jour" />
                         <span className="radio-label">Jour</span>
                     </label>
 
@@ -115,7 +114,7 @@ const GameMenu = ({ onPlay, setAmbiance, ambiance }) => {
                             onChange={() => handleAmbianceChange("Sunset")}
                             checked={ambiance === "Sunset"}
                         />
-                        <img src="../assets/images/icons/Icon-Sunset.png" alt="Sunset" />
+                        <img src="../../public/assets/images/icons/Icon-Sunset.png" alt="Sunset" />
                         <span className="radio-label">Sunset</span>
                     </label>
 
@@ -127,7 +126,7 @@ const GameMenu = ({ onPlay, setAmbiance, ambiance }) => {
                             onChange={() => handleAmbianceChange("Nuit")}
                             checked={ambiance === "Nuit"}
                         />
-                        <img src="../assets/images/icons/Icon-Night.png" alt="Nuit" />
+                        <img src="../../public/assets/images/icons/Icon-Night.png" alt="Nuit" />
                         <span className="radio-label">Nuit</span>
                     </label>
                 </div>

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import City from "../components/City"
 import GameMenu from "../components/GameMenu"
 
 const Explore = () => {
@@ -14,7 +13,7 @@ const Explore = () => {
             {!gameStarted ? (
                 <GameMenu onPlay={handlePlay} setAmbiance={setAmbiance} ambiance={ambiance} />
             ) : (
-                <City gameStarted={gameStarted} ambiance={ambiance} />
+                <p>test</p>
             )}
         </>
     )

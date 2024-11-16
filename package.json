@@ -16,7 +16,6 @@
     "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
     "react-spring": "^9.7.4",
-    "react-sprite-animator": "^2.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

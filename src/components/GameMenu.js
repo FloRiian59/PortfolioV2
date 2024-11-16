@@ -115,7 +115,7 @@ const GameMenu = ({ onPlay, setAmbiance, ambiance }) => {
                             onChange={() => handleAmbianceChange("Sunset")}
                             checked={ambiance === "Sunset"}
                         />
-                        <img src="../assets/images/icons/icon-Sunset.png" alt="Sunset" />
+                        <img src="../assets/images/icons/Icon-Sunset.png" alt="Sunset" />
                         <span className="radio-label">Sunset</span>
                     </label>
 
@@ -127,7 +127,7 @@ const GameMenu = ({ onPlay, setAmbiance, ambiance }) => {
                             onChange={() => handleAmbianceChange("Nuit")}
                             checked={ambiance === "Nuit"}
                         />
-                        <img src="../assets/images/icons/icon-Night.png" alt="Nuit" />
+                        <img src="../assets/images/icons/Icon-Night.png" alt="Nuit" />
                         <span className="radio-label">Nuit</span>
                     </label>
                 </div>

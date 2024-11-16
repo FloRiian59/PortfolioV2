@@ -102,7 +102,7 @@ const GameMenu = ({ onPlay, setAmbiance, ambiance }) => {
                             onChange={() => handleAmbianceChange("Jour")}
                             checked={ambiance === "Jour"}
                         />
-                        <img src="/assets/images/icons/icon-Sun.png" alt="Jour" />
+                        <img src="/assets/images/icons/Icon-Sun.png" alt="Jour" />
                         <span className="radio-label">Jour</span>
                     </label>
 

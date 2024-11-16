@@ -1,0 +1,42 @@
+.section-title-container {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+.section-title-container h2 {
+  font-size: 18px;
+}
+h2 {
+  color: white;
+  font-family: "Press Start 2P", serif;
+}
+.line1 {
+  flex-grow: 1;
+  height: 4px;
+  background-image: linear-gradient(
+    to left,
+    #512d62,
+    #452d59,
+    #3a2b4f,
+    #302944,
+    #292639
+  );
+  margin: 0 10px;
+}
+.line2 {
+  flex-grow: 1;
+  height: 4px;
+  background-image: linear-gradient(
+    to right,
+    #512d62,
+    #452d59,
+    #3a2b4f,
+    #302944,
+    #292639
+  );
+  margin: 0 10px;
+}
+.section-title {
+  font-size: 16px;
+  font-family: "Press Start 2P", serif;
+}

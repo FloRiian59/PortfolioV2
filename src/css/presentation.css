@@ -1,0 +1,344 @@
+.section-presentation-picture {
+  width: 300px;
+  height: 390px;
+}
+.section-presentation-intro {
+  padding-left: 20px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.section-presentation-intro p {
+  color: white;
+  line-height: 150%;
+  font-family: "Pixelify Sans", serif;
+  font-size: 20px;
+  overflow-y: auto;
+}
+.container {
+  display: flex;
+  width: 550px;
+  height: 150px;
+  background-color: lightgrey;
+}
+
+.my-scrollable-element {
+  color: black;
+  line-height: 150%;
+  font-size: 20px;
+  overflow-y: auto;
+  max-height: 100%; /* Assure un défilement vertical seulement */
+}
+
+/* Styles de la scrollbar pour les navigateurs WebKit */
+.my-scrollable-element::-webkit-scrollbar {
+  width: 15px;
+}
+
+.my-scrollable-element::-webkit-scrollbar-track {
+  background-color: #1b1926; /* Couleur du fond de la scrollbar */
+  border-radius: 0px;
+}
+
+.my-scrollable-element::-webkit-scrollbar-thumb {
+  background-color: #ee575a; /* Couleur du "thumb" (curseur de la scrollbar) */
+  border-radius: 0px;
+  border: 3px solid darkred; /* Ajoute un espace autour du curseur */
+}
+
+.my-scrollable-element::-webkit-scrollbar-thumb:hover {
+  background-color: darkred; /* Couleur du curseur au survol */
+}
+
+.section-presentation button {
+  padding: 10px 40px;
+  font-size: 18px;
+  background-color: #333;
+  color: #fff;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  z-index: 1;
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: unset;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: 900;
+  transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  width: 250px;
+}
+.section-presentation button:before {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  z-index: -1;
+  background-color: #d13c3c !important;
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+.section-presentation button:after {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+.section-presentation button:hover:before {
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+.section-presentation button:hover:after {
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+}
+.section-presentation button:active {
+  transform: translateY(4px);
+}
+.section-presentation button:active:after {
+  box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+}
+.modal-content {
+  background-image: url("../../public/assets/images/modal/Contact.png");
+  background-size: contain;
+  padding: 20px;
+  border-radius: 8px;
+  width: 580px;
+  height: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(3, 12% 60% 40%);
+  justify-items: center;
+  justify-content: center;
+}
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-form {
+  display: grid;
+  justify-items: center;
+}
+.name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+}
+label {
+  font-family: "Pixelify Sans", serif;
+  font-size: 20px;
+}
+
+.input-name {
+  height: 35px;
+  width: 500px;
+  outline: none;
+  margin: 15px;
+  padding: 7px 0 7px 14px;
+  border: 3px solid rgb(150, 150, 150);
+  box-shadow: 0px 0px 0px 1px rgb(90, 90, 90),
+    inset 0px 0px 0px 1px rgb(90, 90, 90), 1px 2px 0px 2px rgb(100, 100, 100);
+  border-radius: 0.3em;
+  color: rgb(50, 50, 50);
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+.lastname-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+}
+
+.input-lastname {
+  height: 35px;
+  width: 500px;
+  outline: none;
+  margin: 15px;
+  padding: 7px 0 7px 14px;
+  border: 3px solid rgb(150, 150, 150);
+  box-shadow: 0px 0px 0px 1px rgb(90, 90, 90),
+    inset 0px 0px 0px 1px rgb(90, 90, 90), 1px 2px 0px 2px rgb(100, 100, 100);
+  border-radius: 0.3em;
+  color: rgb(50, 50, 50);
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+.email-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+}
+
+.input-email {
+  height: 35px;
+  width: 500px;
+  outline: none;
+  margin: 15px;
+  padding: 7px 0 7px 14px;
+  border: 3px solid rgb(150, 150, 150);
+  box-shadow: 0px 0px 0px 1px rgb(90, 90, 90),
+    inset 0px 0px 0px 1px rgb(90, 90, 90), 1px 2px 0px 2px rgb(100, 100, 100);
+  border-radius: 0.3em;
+  color: rgb(50, 50, 50);
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+}
+
+.input-message {
+  height: 100px;
+  width: 500px;
+  max-width: 500px;
+  max-height: 100px;
+  outline: none;
+  margin: 15px;
+  padding: 7px 0 7px 14px;
+  border: 3px solid rgb(150, 150, 150);
+  box-shadow: 0px 0px 0px 1px rgb(90, 90, 90),
+    inset 0px 0px 0px 1px rgb(90, 90, 90), 1px 2px 0px 2px rgb(100, 100, 100);
+  border-radius: 0.3em;
+  color: rgb(50, 50, 50);
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+.input-submit {
+  padding: 5px 35px;
+  outline: none;
+  border: 3px solid white;
+  box-shadow: 0px 0px 0px 1px rgb(90, 90, 90),
+    inset 0px 0px 0px 1px rgb(90, 90, 90), 0px 2px 0px 2px rgb(100, 100, 100);
+  text-shadow: 0px -1px rgb(90, 90, 90), -1px 0px rgb(90, 90, 90);
+  border-radius: 0.3em;
+  color: white;
+  background-color: rgb(90, 90, 90);
+  font-family: "M PLUS 1p", sans-serif;
+  font-size: 1.3em;
+  font-weight: 700;
+  cursor: pointer;
+}
+.input-submit:active {
+  background-color: rgb(75, 75, 75);
+  box-shadow: 0px 0px 0px 1px rgb(90, 90, 90),
+    inset 0px 0px 0px 1px rgb(90, 90, 90), 0px 1px 0px 2px rgb(100, 100, 100);
+}
+.input-close {
+  margin-top: 120px;
+  padding: 10px 40px;
+  font-size: 18px;
+  background-color: #333;
+  color: #fff;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  z-index: 1;
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: unset;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: 900;
+  transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  width: 555px;
+  height: 65px;
+}
+.input-close:before {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  z-index: -1;
+  background-color: #3882cb !important;
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+.input-close:after {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+.input-close:hover:before {
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+.input-close:hover:after {
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.15);
+}
+.input-close:active {
+  transform: translateY(4px);
+}
+.input-close:active:after {
+  box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .section-presentation {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .section-presentation {
+    flex-direction: column;
+    height: 900px;
+    align-items: center;
+  }
+  .section-presentation-intro {
+    align-items: center;
+    margin-bottom: 40px;
+  }
+}

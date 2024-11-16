@@ -1,0 +1,357 @@
+.modal-options-content {
+  background-image: url("../../public/assets/images/modal/OptionsModal.png");
+  background-position: center;
+  background-size: contain;
+  padding: 20px;
+  width: 900px;
+  height: 900px;
+  border-radius: 8px;
+  margin: 0 auto;
+  z-index: 1000000;
+}
+.modal-options-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000000;
+}
+.modal-options-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-top: 150px;
+  margin-left: 150px;
+  align-items: center;
+  font-family: "Pixelify Sans", sans;
+}
+.modal-options-title {
+  display: flex;
+  font-size: 22px;
+  padding-right: 35px;
+}
+
+.modal-options-text {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+}
+.modal-options-title-list {
+  display: flex;
+  width: 380px;
+  margin: 0;
+}
+.modal-options-container ul {
+  padding: 0;
+  width: 360px;
+  gap: 20px;
+}
+.modal-ambiance-content {
+  background-image: url("../../public/assets/images/modal/Modale\ Ambiance.png");
+  background-position: center;
+  background-size: contain;
+  padding: 20px;
+  width: 450px;
+  height: 450px;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1000000;
+}
+.modal-ambiance-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000000;
+}
+.buttons-container {
+  display: flex;
+  justify-content: space-around;
+}
+.theme-selection {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.theme-selection label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theme-selection span {
+  font-family: "Pixelify Sans", serif;
+  color: #fff2d2;
+  font-size: 25px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.theme-selection label img {
+  width: 120px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+input[type="radio"]:checked + img {
+  opacity: 1;
+  transform: scale(1.1) translateY(-10px);
+}
+
+.game-input-close {
+  font-size: 18px;
+  background-color: #333;
+  color: #fef1d1;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  z-index: 1;
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: unset;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: "Pixelify Sans", serif;
+  transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  width: 80%;
+  margin-bottom: 125px;
+}
+.game-input-close:before {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  z-index: -1;
+  background-color: #575f68 !important;
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+.game-input-close:after {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+.game-input-close:hover:before {
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+.game-input-close:hover:after {
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.15);
+}
+.game-input-close:active {
+  transform: translateY(4px);
+}
+.game-input-close:active:after {
+  box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+}
+
+.game-menu-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 10000;
+  gap: 25px;
+  align-items: center;
+}
+.game-menu-container h1 {
+  font-family: "Press Start 2P", serif;
+  font-size: 75px;
+  margin-bottom: 25px;
+  text-shadow: -5px -5px 0px #ffffff;
+  background: linear-gradient(rgb(255, 123, 0), rgb(255, 217, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.game-play-button {
+  font-family: "Press Start 2P", serif;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  color: white;
+  font-size: 25px;
+  position: relative;
+}
+.game-play-button:before {
+  content: "";
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  left: -25px;
+  border-top: solid 12px transparent;
+  border-left: solid 22px rgb(255, 255, 255);
+  border-bottom: solid 12px transparent;
+  opacity: 0;
+}
+.game-play-button:after {
+  content: "";
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  left: 110px;
+  border-top: solid 12px transparent;
+  border-right: solid 22px rgb(255, 255, 255);
+  border-bottom: solid 12px transparent;
+  opacity: 0;
+}
+.game-play-button:hover {
+  transform: translateY(-5px);
+}
+.game-play-button:hover:before,
+.game-play-button:hover:after {
+  opacity: 1;
+}
+.game-options-button {
+  font-family: "Press Start 2P", serif;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  color: white;
+  font-size: 25px;
+}
+.game-options-button:before {
+  content: "";
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  left: -25px;
+  border-top: solid 12px transparent;
+  border-left: solid 22px rgb(255, 255, 255);
+  border-bottom: solid 12px transparent;
+  opacity: 0;
+}
+.game-options-button:after {
+  content: "";
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  left: 182px;
+  border-top: solid 12px transparent;
+  border-right: solid 22px rgb(255, 255, 255);
+  border-bottom: solid 12px transparent;
+  opacity: 0;
+}
+.game-options-button:hover {
+  transform: translateY(-5px);
+}
+.game-options-button:hover:before,
+.game-options-button:hover:after {
+  opacity: 1;
+}
+
+.game-exit-button {
+  font-family: "Press Start 2P", serif;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  color: white;
+  font-size: 25px;
+}
+.game-exit-button:before {
+  content: "";
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  left: -25px;
+  border-top: solid 12px transparent;
+  border-left: solid 22px rgb(255, 255, 255);
+  border-bottom: solid 12px transparent;
+  opacity: 0;
+}
+.game-exit-button:after {
+  content: "";
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  left: 110px;
+  border-top: solid 12px transparent;
+  border-right: solid 22px rgb(255, 255, 255);
+  border-bottom: solid 12px transparent;
+  opacity: 0;
+}
+.game-exit-button:hover {
+  transform: translateY(-5px);
+}
+.game-exit-button:hover:before,
+.game-exit-button:hover:after {
+  opacity: 1;
+}
+.game-ambiance-button {
+  font-family: "Press Start 2P", serif;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  color: white;
+  font-size: 25px;
+}
+.game-ambiance-button:before {
+  content: "";
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  left: -25px;
+  border-top: solid 12px transparent;
+  border-left: solid 22px rgb(255, 255, 255);
+  border-bottom: solid 12px transparent;
+  opacity: 0;
+}
+.game-ambiance-button:after {
+  content: "";
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  left: 210px;
+  border-top: solid 12px transparent;
+  border-right: solid 22px rgb(255, 255, 255);
+  border-bottom: solid 12px transparent;
+  opacity: 0;
+}
+.game-ambiance-button:hover {
+  transform: translateY(-5px);
+}
+.game-ambiance-button:hover:before,
+.game-ambiance-button:hover:after {
+  opacity: 1;
+}

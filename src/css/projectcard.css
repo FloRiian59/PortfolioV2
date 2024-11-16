@@ -1,0 +1,153 @@
+.project-card {
+  border: 2px solid transparent;
+  position: relative;
+  border-radius: 10px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card img.card {
+  width: 250px;
+  height: fit-content;
+  z-index: -1;
+}
+
+/* Icônes et conteneurs */
+.icon1,
+.icon2,
+.icon3 {
+  width: 66px;
+  height: 66px;
+  position: absolute;
+  bottom: 28px;
+  z-index: 1;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.icon1 {
+  left: 15px;
+}
+.icon2 {
+  left: 91px;
+}
+.icon3 {
+  left: 168px;
+}
+
+.icon1:hover,
+.icon2:hover,
+.icon3:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+/* Effets de survol de la carte */
+.project-card:hover {
+  transform: scale(1.05) translateY(-20px);
+}
+
+/* Conserve les styles de couleur dynamique avec des classes CSS pour chaque projet */
+.project-card.projet1:hover {
+  border-color: #3463ab;
+  box-shadow: 0 4px 12px #3463ab;
+}
+.project-card.projet2:hover {
+  border-color: #a73699;
+  box-shadow: 0 4px 12px #a73699;
+}
+.project-card.projet3:hover {
+  border-color: #ff7f4e;
+  box-shadow: 0 4px 12px #ff7f4e;
+}
+.project-card.projet4:hover {
+  border-color: #af3930;
+  box-shadow: 0 4px 12px #af3930;
+}
+.project-card.projet5:hover {
+  border-color: #4ea7ff;
+  box-shadow: 0 4px 12px #4ea7ff;
+}
+.project-card.projet6:hover {
+  border-color: #8900df;
+  box-shadow: 0 4px 12px #8900df;
+}
+.project-card.projet7:hover {
+  border-color: #519847;
+  box-shadow: 0 4px 12px #519847;
+}
+.project-card.projet8:hover {
+  border-color: #eac378;
+  box-shadow: 0 4px 12px #eac378;
+}
+
+/* Effets de conteneurs d'icônes */
+.icon-container1,
+.icon-container2,
+.icon-container3 {
+  position: relative;
+}
+
+.icon-container1::after,
+.icon-container2::after,
+.icon-container3::after {
+  content: "";
+  width: 82px;
+  height: 42px;
+  background-size: cover;
+  position: absolute;
+  top: -93px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.icon-container1::after {
+  background-image: url("../../public/assets/images/icons/Icon-Bulle-Github.png");
+  left: 10px;
+}
+
+.icon-container2::after {
+  background-image: url("../../public/assets/images/icons/Icon-Bulle-Demo.png");
+  left: 86px;
+}
+
+.icon-container3::after {
+  background-image: url("../../public/assets/images/icons/Icon-Bulle-Modal.png");
+  left: 163px;
+}
+
+.icon-container1:hover::after,
+.icon-container2:hover::after,
+.icon-container3:hover::after {
+  opacity: 1;
+  transform: translateY(-50px);
+}
+.modal-project-content {
+  background-image: url("");
+  background-position: center;
+  background-size: contain;
+  padding: 15px;
+  width: 900px;
+  height: 900px;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(3, 12% 60% 40%);
+  justify-items: center;
+  justify-content: center;
+}
+.modal-project-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.test {
+  width: 250px;
+  height: 150px;
+}

@@ -1,0 +1,222 @@
+.modal-project-container {
+  display: flex;
+  width: 100%;
+  height: 484px;
+  gap: 35px;
+  margin-right: 14px;
+  color: white;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-project-content:focus {
+  outline: none;
+}
+.carousel .slide img {
+  height: 300px;
+  margin: 0;
+}
+.carousel .control-dots .dot {
+  background: black;
+}
+.carousel .carousel-status {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  padding: 5px;
+  font-size: 13px;
+  font-family: "Pixelify Sans", serif;
+  text-shadow: 1px 1px 1px rgb(130 130 130);
+  color: #000000;
+}
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid #000000;
+}
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid #000000;
+}
+.top-section {
+  display: grid;
+  grid-template-rows: 70% 10%;
+  width: 48%;
+  height: 484px;
+  margin-top: -4px;
+  justify-content: center;
+  justify-items: center;
+}
+.title-project {
+  margin: 0;
+  text-align: center;
+  font-family: "Press Start 2P", serif;
+  font-size: 24px;
+  width: 500px;
+}
+.subtitle-project {
+  text-align: center;
+  margin: 0;
+  margin-top: 44px;
+  font-size: 22px;
+  font-family: "Press Start 2P", serif;
+  width: 250px;
+  margin-left: 85px;
+}
+.carousel-root {
+  margin-left: 10px;
+  margin-right: -4px;
+  margin-top: 2px;
+}
+.arrow-prev {
+  position: absolute;
+  bottom: 75px;
+  left: 0px;
+  width: 78px;
+  height: 78px;
+}
+.arrow-next {
+  position: absolute;
+  bottom: 75px;
+  left: 346px;
+  width: 78px;
+  height: 78px;
+}
+.arrow-next:hover {
+  transform: scale(1.05) translateY(-5px);
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.arrow-prev:hover {
+  transform: scale(1.05) translateY(-5px);
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.close-button {
+  height: 40px;
+  width: 100%;
+  margin-top: 52px;
+  margin-left: 15px;
+  font-size: 18px;
+  background-color: #333;
+  color: #fff;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  z-index: 1;
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: unset;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: 900;
+  transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+.close-button:before {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  z-index: -1;
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+.close-button.bookie:before {
+  background-color: #3463ab !important;
+}
+.close-button.ohmyfood:before {
+  background-color: #a73699 !important;
+}
+.close-button.sophiebluel:before {
+  background-color: #ff7f4e !important;
+}
+.close-button.kasa:before {
+  background-color: #af3930 !important;
+}
+.close-button.ninacarducci:before {
+  background-color: #4ea7ff !important;
+}
+.close-button.events:before {
+  background-color: #8900df !important;
+}
+.close-button.argentbank:before {
+  background-color: #519847 !important;
+}
+.close-button.qwenta:before {
+  background-color: #eac378 !important;
+}
+.close-button:after {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+.close-button:hover:before {
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+.close-button:hover:after {
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.15);
+}
+.close-button:active {
+  transform: translateY(4px);
+}
+.close-button:active:after {
+  box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+}
+.bottom-section {
+  display: grid;
+  grid-template-rows: 10% 40% 5% 11%;
+  width: 45%;
+  height: 484px;
+  margin-top: 4px;
+}
+.summary-title {
+  margin: 0;
+  margin-bottom: 99px;
+  text-align: center;
+  margin-top: 2px;
+  font-family: "Press Start 2P", serif;
+  font-size: 22px;
+}
+.summary-project {
+  margin: 0;
+  margin-top: 7px;
+  text-align: left;
+  font-family: "Pixelify Sans", serif;
+  font-size: 18px;
+  width: 426px;
+}
+
+.objectif-title {
+  margin: 0;
+  text-align: center;
+  margin-top: 8px;
+  font-family: "Press Start 2P", serif;
+  margin-top: 12px;
+}
+.project-objectives {
+  font-family: "Pixelify Sans", serif;
+  font-size: 20px;
+}
+.right-section ul {
+  padding: 0;
+  padding-left: 20px;
+}
+.project-objectives li {
+  list-style-type: square;
+  font-size: 18px;
+}

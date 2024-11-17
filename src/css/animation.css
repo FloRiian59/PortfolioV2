@@ -2,7 +2,7 @@
   position: absolute;
   z-index: 100000;
   bottom: 0;
-  left: 44%;
+  left: 44%; /* Position initiale sur les écrans plus larges */
   overflow: hidden;
   animation: SlideInBottom 2.5s ease-in-out 1 backwards;
 }
@@ -17,6 +17,19 @@
   animation: none; /* Pas d'animation supplémentaire */
 }
 
+/* Media Query pour centrer le personnage sur mobile */
+@media (max-width: 640px) {
+  .animation {
+    left: 50%; /* Centre le personnage */
+    transform: translateX(-50%); /* Corrige le décalage dû à la largeur */
+  }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .animation {
+    left: 50%; /* Centre le personnage */
+    transform: translateX(-50%); /* Corrige le décalage dû à la largeur */
+  }
+}
 @keyframes SlideInBottom {
   from {
     transform: translateY(1000px);

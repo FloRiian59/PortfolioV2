@@ -76,7 +76,7 @@
   height: fit-content;
   margin-top: 150px;
   transform: translateX(1600px);
-  width: calc(var(--city-width) * 0.8);
+  width: calc(var(--city-width) * 5);
 }
 
 @keyframes SlideInLeft {
@@ -112,5 +112,22 @@
   to {
     transform: translateX(0px);
     opacity: 1;
+  }
+}
+@media (max-width: 640px) {
+  :root {
+    --city-width: 1200vw;
+  }
+  .scrollable-gallery-container .section-gallery-container {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  :root {
+    --city-width: 800vw;
+  }
+  .scrollable-gallery-container .section-gallery-container {
+    margin-top: 0px;
   }
 }

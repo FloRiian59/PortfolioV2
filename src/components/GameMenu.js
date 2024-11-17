@@ -78,7 +78,7 @@ const GameMenu = ({ onPlay, setAmbiance, ambiance }) => {
             >
                 <div className="modal-options-container">
                     <h3 className="modal-options-title">Bienvenue dans ProjectRunner !</h3>
-                    <p className="modal-options-text"><strong>Ton objectif est simple :</strong> <br></br>Progresse à travers le niveau en découvrant mes projets au fur et à mesure de ton parcours.</p>
+                    <p className="modal-options-text"><strong>Ton objectif est simple :</strong>Progresse à travers le niveau en découvrant mes projets au fur et à mesure de ton parcours.</p>
                     <h4 className="modal-options-title-list">Contrôles :</h4>
                     <ul className="modal-options-text">
                         <li >Ordinateur : utilise les flèches pour te déplacer.</li>

@@ -4,7 +4,7 @@ import '../css/city.css';
 import ScrollableGallery from './ScrollableGallery';
 
 const City = ({ gameStarted, ambiance }) => {
-    const startPosition = 0
+    const startPosition = 0;
     const [backgroundPosition, setBackgroundPosition] = useState({
         background: startPosition,
         road: startPosition,
@@ -17,23 +17,76 @@ const City = ({ gameStarted, ambiance }) => {
     const [isMoving, setIsMoving] = useState(false); // Reste false tant qu'aucune touche n'est pressée
     const [direction, setDirection] = useState(1);
 
+    // Fonction pour calculer les vitesses en fonction de la largeur de l'écran
+    const calculateSpeeds = () => {
+        const screenWidth = window.innerWidth;
+
+        if (screenWidth <= 640) { // Mobile
+            return {
+                background: 0.4,
+                road: 2,
+                firstPlan: 1.5,
+                secondPlan: 1,
+                thirdPlan: 0.5,
+                fourthPlan: 0.7,
+                projectGallery: 4, // Vitesse plus élevée pour mobile
+            };
+        } else if (screenWidth <= 1024) { // Tablette
+            return {
+                background: 0.3,
+                road: 1.5,
+                firstPlan: 1.2,
+                secondPlan: 0.8,
+                thirdPlan: 0.4,
+                fourthPlan: 0.6,
+                projectGallery: 1.5,
+            };
+        } else { // Desktop
+            return {
+                background: 0.2,
+                road: 1,
+                firstPlan: 1,
+                secondPlan: 0.5,
+                thirdPlan: 0.2,
+                fourthPlan: 0.3,
+                projectGallery: 0.5,
+            };
+        }
+    };
+
+    const [speeds, setSpeeds] = useState(calculateSpeeds());
+
+    // Met à jour les vitesses en cas de redimensionnement de l'écran
+    useEffect(() => {
+        const handleResize = () => {
+            setSpeeds(calculateSpeeds());
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        // Initialisation
+        handleResize();
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     const getImagePath = (layer) => {
         return `../assets/images/game/${ambiance}/${layer}.png`;
     };
 
     const move = useCallback(() => {
         if (gameStarted && isMoving) {
-            setBackgroundPosition(prevState => ({
-                background: prevState.background - 0.2 * direction,
-                road: prevState.road - 1 * direction,
-                firstPlan: prevState.firstPlan - 1 * direction,
-                secondPlan: prevState.secondPlan - 0.5 * direction,
-                thirdPlan: prevState.thirdPlan - 0.2 * direction,
-                fourthPlan: prevState.fourthPlan - 0.3 * direction,
-                projectGallery: prevState.fourthPlan - 2 * direction,
+            setBackgroundPosition((prevState) => ({
+                background: prevState.background - speeds.background * direction,
+                road: prevState.road - speeds.road * direction,
+                firstPlan: prevState.firstPlan - speeds.firstPlan * direction,
+                secondPlan: prevState.secondPlan - speeds.secondPlan * direction,
+                thirdPlan: prevState.thirdPlan - speeds.thirdPlan * direction,
+                fourthPlan: prevState.fourthPlan - speeds.fourthPlan * direction,
+                projectGallery: prevState.projectGallery - speeds.projectGallery * direction,
             }));
         }
-    }, [direction, gameStarted, isMoving]);
+    }, [direction, gameStarted, isMoving, speeds]);
 
     useEffect(() => {
         let interval;

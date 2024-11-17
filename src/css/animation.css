@@ -3,13 +3,18 @@
   z-index: 100000;
   bottom: 0;
   left: 44%;
-  width: 90.5px;
-  height: 183.5px;
   overflow: hidden;
   animation: SlideInBottom 2.5s ease-in-out 1 backwards;
 }
+
 .animation.flip {
-  transform: scaleX(-1); /* Flip horizontal */
+  transform: scaleX(-1); /* Inversion horizontale pour refléter */
+}
+
+.sprite-sheet {
+  display: block;
+  background-size: cover; /* Pour éviter les écarts visibles */
+  animation: none; /* Pas d'animation supplémentaire */
 }
 
 @keyframes SlideInBottom {

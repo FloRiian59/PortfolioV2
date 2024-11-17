@@ -75,8 +75,8 @@
   justify-content: space-between;
   height: fit-content;
   margin-top: 150px;
-  transform: translateX(1900px);
-  width: calc(var(--city-width) * 5);
+  transform: translateX(1600px);
+  width: calc(var(--city-width) * 0.8);
 }
 
 @keyframes SlideInLeft {

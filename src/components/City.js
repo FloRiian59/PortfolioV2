@@ -25,7 +25,7 @@ const City = ({ gameStarted, ambiance }) => {
         if (screenWidth <= 640) { // Mobile
             return {
                 background: 0.4,
-                road: 2,
+                road: 1.5,
                 firstPlan: 1.5,
                 secondPlan: 1,
                 thirdPlan: 0.5,
@@ -35,7 +35,7 @@ const City = ({ gameStarted, ambiance }) => {
         } else if (screenWidth <= 1024) { // Tablette
             return {
                 background: 0.3,
-                road: 1.5,
+                road: 1.2,
                 firstPlan: 1.2,
                 secondPlan: 0.8,
                 thirdPlan: 0.4,

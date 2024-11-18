@@ -8,7 +8,7 @@
 }
 
 .animation.flip {
-  transform: translateX(-50%) scaleX(-1); /* Inversion horizontale pour refléter */
+  transform: scaleX(-1); /* Inversion horizontale pour refléter */
 }
 
 .sprite-sheet {
@@ -31,11 +31,17 @@
     left: 50%; /* Centre le personnage */
     transform: translateX(-50%); /* Corrige le décalage dû à la largeur */
   }
+  .animation.flip {
+    transform: translateX(-50%) scaleX(-1);
+  }
 }
 @media (min-width: 641px) and (max-width: 1024px) {
   .animation {
     left: 50%; /* Centre le personnage */
     transform: translateX(-50%); /* Corrige le décalage dû à la largeur */
+  }
+  .animation.flip {
+    transform: translateX(-50%) scaleX(-1);
   }
 }
 @keyframes SlideInBottom {

@@ -9,10 +9,11 @@
 }
 
 .arrow-button {
-  width: 60px; /* Taille des flèches */
-  height: 60px;
+  width: 80px; /* Taille des flèches */
+  height: 80px;
   background-size: contain;
   background-repeat: no-repeat;
+  user-select: none;
 }
 
 .left-arrow {

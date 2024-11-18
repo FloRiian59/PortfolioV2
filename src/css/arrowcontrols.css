@@ -1,0 +1,57 @@
+.mobile-arrows {
+  position: fixed;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000000;
+  pointer-events: none; /* Empêche les clics accidentels sur le conteneur */
+}
+
+.arrow-button {
+  pointer-events: all; /* Active les clics uniquement sur les boutons */
+  background: none;
+  border: none;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 1000000;
+}
+
+.arrow-button img {
+  width: 100%;
+  height: auto;
+  opacity: 0;
+}
+
+.left-arrow {
+  left: 0%;
+  bottom: 0%;
+  opacity: 0.8;
+}
+
+.right-arrow {
+  right: 0%;
+  bottom: 0%;
+  opacity: 0.8;
+}
+.arrow-button:active img {
+  transform: scale(
+    0.9
+  ); /* Réduit légèrement l'image pour donner un effet de clic */
+  transition: transform 0.1s ease;
+}
+@media (max-width: 640px) {
+  .arrow-button img {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .arrow-button img {
+    opacity: 1;
+    cursor: pointer;
+  }
+}

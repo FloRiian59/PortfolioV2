@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import CharacterAnimation from './CharacterAnimation';
-import '../css/city.css';
 import ScrollableGallery from './ScrollableGallery';
+import ArrowControls from "./ArrowControls";
+import '../css/city.css';
 
 const City = ({ gameStarted, ambiance }) => {
     const startPosition = 0;
@@ -97,6 +98,21 @@ const City = ({ gameStarted, ambiance }) => {
         return () => clearInterval(interval);
     }, [isMoving, gameStarted, move]);
 
+    const handleArrowPress = (key) => {
+        if (key === "ArrowLeft") {
+            setDirection(-1);
+            setIsMoving(true);
+        }
+        if (key === "ArrowRight") {
+            setDirection(1);
+            setIsMoving(true);
+        }
+    };
+
+    const handleArrowRelease = () => {
+        setIsMoving(false);
+    };
+
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === "ArrowRight") {
@@ -128,6 +144,10 @@ const City = ({ gameStarted, ambiance }) => {
 
     return (
         <div className="city">
+            <ArrowControls
+                onArrowPress={handleArrowPress}
+                onArrowRelease={handleArrowRelease}
+            />
             <div
                 className="city-background background"
                 style={{

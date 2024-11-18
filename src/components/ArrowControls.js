@@ -2,8 +2,10 @@ import React from 'react';
 import '../css/arrowcontrols.css';
 
 const ArrowControls = ({ onArrowPress, onArrowRelease }) => {
+
     const handleTouchStart = (event, direction) => {
-        event.preventDefault(); // Empêche le menu contextuel ou autre comportement par défaut
+        event.preventDefault();// Empêche le menu contextuel ou autre comportement par défaut
+        event.stopPropagation();
         onArrowPress(direction);
     };
 

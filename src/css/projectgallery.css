@@ -28,11 +28,21 @@
     grid-template-columns: repeat(2, 50%); /* 4 colonnes */
     grid-template-rows: repeat(4, auto); /* 2 lignes */
   }
+  .project-card img.card {
+    width: 250px;
+    height: 370px;
+    z-index: -1;
+  }
 }
 @media (max-width: 640px) {
   .section-gallery-container {
     display: grid;
     grid-template-columns: repeat(1, 80%); /* 4 colonnes */
     grid-template-rows: repeat(8, 380px); /* 2 lignes */
+  }
+  .project-card img.card {
+    width: 250px;
+    height: 370px;
+    z-index: -1;
   }
 }

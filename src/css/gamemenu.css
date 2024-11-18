@@ -493,20 +493,20 @@ input[type="radio"]:checked + img {
 }
 @media (max-width: 640px) {
   .modal-ambiance-content {
-    padding: 0px;
-    width: 95%;
-    max-width: 400px;
-    max-height: 46vh;
+    max-height: 42vh;
+    max-width: 430px;
+    padding: 0;
+    width: 91%;
   }
   .theme-selection label img {
     width: 80px;
     margin-top: 10px;
   }
   .modal-ambiance-content {
-    padding: 0px;
-    width: 95%;
-    max-width: 450px;
-    max-height: 63vh;
+    max-height: 42vh;
+    max-width: 430px;
+    padding: 0;
+    width: 91%;
   }
   .theme-selection label img {
     width: 90px;

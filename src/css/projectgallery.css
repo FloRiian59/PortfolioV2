@@ -29,3 +29,10 @@
     grid-template-rows: repeat(4, auto); /* 2 lignes */
   }
 }
+@media (max-width: 640px) {
+  .section-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(1, 80%); /* 4 colonnes */
+    grid-template-rows: repeat(8, auto); /* 2 lignes */
+  }
+}

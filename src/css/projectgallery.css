@@ -33,6 +33,6 @@
   .section-gallery-container {
     display: grid;
     grid-template-columns: repeat(1, 80%); /* 4 colonnes */
-    grid-template-rows: repeat(8, auto); /* 2 lignes */
+    grid-template-rows: repeat(8, 380px); /* 2 lignes */
   }
 }

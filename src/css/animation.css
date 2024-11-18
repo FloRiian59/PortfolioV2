@@ -25,6 +25,16 @@
   object-fit: cover;
   z-index: 100000; /* S'assure qu'il reste visible */
 }
+@keyframes SlideInBottom {
+  from {
+    transform: translateY(1000px);
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 /* Media Query pour centrer le personnage sur mobile */
 @media (max-width: 640px) {
   .animation {
@@ -33,6 +43,15 @@
   }
   .animation.flip {
     transform: translateX(-50%) scaleX(-1);
+  }
+  @keyframes SlideInBottom {
+    from {
+      transform: translateY(1000px) translateX(-50%);
+    }
+    to {
+      transform: translateX(0px) translateX(-50%);
+      opacity: 1;
+    }
   }
 }
 @media (min-width: 641px) and (max-width: 1024px) {
@@ -43,13 +62,13 @@
   .animation.flip {
     transform: translateX(-50%) scaleX(-1);
   }
-}
-@keyframes SlideInBottom {
-  from {
-    transform: translateY(1000px);
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
+  @keyframes SlideInBottom {
+    from {
+      transform: translateY(1000px) translateX(-50%);
+    }
+    to {
+      transform: translateX(0px) translateX(-50%);
+      opacity: 1;
+    }
   }
 }

@@ -331,6 +331,37 @@ label {
   .section-presentation {
     margin-bottom: 20px;
   }
+  .modal-content {
+    width: 500px;
+    height: 693px;
+  }
+  .input-name {
+    width: 410px;
+  }
+  .name-container {
+    height: 90px;
+  }
+  .input-lastname {
+    width: 410px;
+  }
+  .lastname-container {
+    height: 90px;
+  }
+  .input-email {
+    width: 410px;
+  }
+  .email-container {
+    height: 90px;
+  }
+  .input-message {
+    width: 410px;
+    height: 65px;
+  }
+  .input-close {
+    margin: 0;
+    margin-top: 103px;
+    width: 85%;
+  }
 }
 @media (max-width: 640px) {
   .section-presentation {
@@ -347,5 +378,38 @@ label {
     text-align: center;
     height: 350px;
     margin-right: 30px;
+  }
+  .modal-content {
+    width: 420px;
+    height: 585px;
+  }
+  .input-name {
+    width: 340px;
+  }
+  .name-container {
+    height: 90px;
+  }
+  .input-lastname {
+    width: 340px;
+  }
+  .lastname-container {
+    height: 90px;
+  }
+  .input-email {
+    width: 340px;
+  }
+  .email-container {
+    height: 90px;
+  }
+  .input-message {
+    width: 340px;
+    height: 65px;
+    margin-bottom: 19px;
+  }
+  .input-close {
+    margin: 0;
+    margin-top: 110px;
+    width: 85%;
+    height: 50px;
   }
 }

@@ -1,0 +1,29 @@
+.modal-ambiance-content {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 266px;
+  background-image: url("../../public/assets/images/game/Ambiance/AmbianceModal.png");
+  background-position: center !important;
+  background-size: contain !important;
+}
+
+.modal-ambiance-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+@media (min-width: 768px) {
+  .modal-ambiance-content {
+    width: 600px;
+    height: 532px;
+  }
+}

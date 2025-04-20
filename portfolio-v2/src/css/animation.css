@@ -1,0 +1,42 @@
+.animation {
+  position: absolute;
+  z-index: 100000;
+  bottom: 0;
+  left: 44%;
+  overflow: hidden;
+  animation: SlideInBottom 2.5s ease-in-out 1 backwards;
+}
+.animation.flip {
+  transform: scaleX(-1); /* Flip horizontal */
+}
+
+@keyframes SlideInBottom {
+  from {
+    transform: translateY(1000px);
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .animation {
+    left: 40%;
+  }
+}
+@media (max-width: 768px) {
+  .animation {
+    left: 35%;
+  }
+}
+@media (max-width: 450px) {
+  .animation {
+    left: 28%;
+  }
+}
+@media (max-width: 300px) {
+  .animation {
+    left: 15%;
+  }
+}

@@ -1,0 +1,191 @@
+.modal-project-content {
+  display: flex;
+  justify-content: center;
+  background-image: url("");
+  width: 290px;
+  height: 535px;
+  background-position: center !important;
+  background-size: contain !important;
+}
+.modal-project-content:focus {
+  outline: none;
+}
+.modal-project-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100000;
+}
+.close-button.bookie {
+  background-color: #3463ab;
+  border-left: 3px solid #3b4a73;
+  border-top: 3px solid #3b4a73;
+  border-right: 3px solid #1d2539;
+  border-bottom: 3px solid #1d2539;
+  outline: 2px solid #0d1425;
+}
+.close-button.bookie:active {
+  background-color: #3463ab;
+  border-left: 3px solid #1d2539;
+  border-top: 3px solid #1d2539;
+  border-right: 3px solid #3b4a73;
+  border-bottom: 3px solid #3b4a73;
+  outline: 2px solid #0d1425;
+}
+.close-button.bookie:hover {
+  background-color: #4077ca;
+  outline: 2px solid #0d1425;
+}
+.close-button.ohmyfood {
+  background-color: #a73699;
+  border-left: 3px solid #75266b;
+  border-top: 3px solid #75266b;
+  border-right: 3px solid #521b4b;
+  border-bottom: 3px solid #521b4b;
+}
+.close-button.ohmyfood:active {
+  background-color: #a73699;
+  border-left: 3px solid #521b4b;
+  border-top: 3px solid #521b4b;
+  border-right: 3px solid #75266b;
+  border-bottom: 3px solid #75266b;
+}
+.close-button.ohmyfood:hover {
+  background-color: #d33ac1;
+}
+.close-button.sophiebluel {
+  background-color: #ff7f4e;
+  border-left: 3px solid #a44300;
+  border-top: 3px solid #a44300;
+  border-right: 3px solid #732f00;
+  border-bottom: 3px solid #732f00;
+  outline: 2px solid #421c00;
+}
+.close-button.sophiebluel:active {
+  background-color: #ff7f4e;
+  border-left: 3px solid #732f00;
+  border-top: 3px solid #732f00;
+  border-right: 3px solid #a44300;
+  border-bottom: 3px solid #a44300;
+  outline: 2px solid #421c00;
+}
+.close-button.sophiebluel:hover {
+  background-color: #ff672b;
+  outline: 2px solid #421c00;
+}
+.close-button.kasa {
+  background-color: #ad3332;
+  border-left: 3px solid #792423;
+  border-top: 3px solid #792423;
+  border-right: 3px solid #551919;
+  border-bottom: 3px solid #551919;
+  outline: 2px solid #421c00;
+}
+.close-button.kasa:active {
+  background-color: #ad3332;
+  border-left: 3px solid #551919;
+  border-top: 3px solid #551919;
+  border-right: 3px solid #792423;
+  border-bottom: 3px solid #792423;
+  outline: 2px solid #421c00;
+}
+.close-button.kasa:hover {
+  background-color: #df2e2e;
+  outline: 2px solid #421c00;
+}
+.close-button.ninacarducci {
+  background-color: #4ea7ff;
+  border-left: 3px solid #3775b3;
+  border-top: 3px solid #3775b3;
+  border-right: 3px solid #27527e;
+  border-bottom: 3px solid #27527e;
+}
+.close-button.ninacarducci:active {
+  background-color: #4ea7ff;
+  border-left: 3px solid #27527e;
+  border-top: 3px solid #27527e;
+  border-right: 3px solid #3775b3;
+  border-bottom: 3px solid #3775b3;
+}
+.close-button.ninacarducci:hover {
+  background-color: #2d94fa;
+}
+.close-button.events {
+  background-color: #8900df;
+  border-left: 3px solid #60009d;
+  border-top: 3px solid #60009d;
+  border-right: 3px solid #43006e;
+  border-bottom: 3px solid #43006e;
+}
+.close-button.events:active {
+  background-color: #8900df;
+  border-left: 3px solid #43006e;
+  border-top: 3px solid #43006e;
+  border-right: 3px solid #60009d;
+  border-bottom: 3px solid #60009d;
+}
+.close-button.events:hover {
+  background-color: #9d00ff;
+}
+.close-button.argentbank {
+  background-color: #519847;
+  border-left: 3px solid #446a44;
+  border-top: 3px solid #446a44;
+  border-right: 3px solid #304a30;
+  border-bottom: 3px solid #304a30;
+  outline: 2px solid #172717;
+}
+.close-button.argentbank:active {
+  background-color: #519847;
+  border-left: 3px solid #304a30;
+  border-top: 3px solid #304a30;
+  border-right: 3px solid #446a44;
+  border-bottom: 3px solid #446a44;
+  outline: 2px solid #172717;
+}
+.close-button.argentbank:hover {
+  background-color: #6ac45e;
+  outline: 2px solid #172717;
+}
+.close-button.qwenta {
+  background-color: #eac378;
+  border-left: 3px solid #9c7f12;
+  border-top: 3px solid #9c7f12;
+  border-right: 3px solid #6e590d;
+  border-bottom: 3px solid #6e590d;
+  outline: 2px solid #3f3708;
+}
+.close-button.qwenta:active {
+  background-color: #eac378;
+  border-left: 3px solid #6e590d;
+  border-top: 3px solid #6e590d;
+  border-right: 3px solid #9c7f12;
+  border-bottom: 3px solid #9c7f12;
+  outline: 2px solid #3f3708;
+}
+.close-button.qwenta:hover {
+  background-color: #ffcf76;
+  outline: 2px solid #3f3708;
+}
+@media (min-width: 769px) {
+  .modal-project-content {
+    width: 769px;
+    height: 769px;
+  }
+}
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid #000000;
+}
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid #000000;
+}
+.carousel .control-arrow,
+.carousel.carousel-slider .control-arrow {
+  opacity: 1;
+}

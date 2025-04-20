@@ -1,0 +1,117 @@
+:root {
+  --city-width: 400vw;
+}
+
+.city {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.city-background {
+  position: absolute;
+  height: 100vh;
+  width: var(--city-width);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  transition: left 0.1s linear;
+}
+
+.background {
+  background-image: url("../../public/assets/images/game/Day/DayBackground.png");
+  z-index: 140;
+  opacity: 0;
+  animation: SlideInTop 2.5s ease-in-out 1 forwards;
+  width: var(--city-width); /* 200vw pour vitesse 0.2 */
+}
+
+.road {
+  background-image: url("../../public/assets/images/game/Day/Road.png");
+  z-index: 150;
+  animation: FadeIn 0.5s ease-in 1 forwards;
+  opacity: 0;
+  width: calc(var(--city-width) * 5); /* 1000vw pour vitesse 1 */
+}
+
+.first-plan {
+  background-image: url("../../public/assets/images/game/Day/FirstPlan.png");
+  z-index: 149;
+  animation: SlideInLeft 0.5s 0.5s ease-out 1 forwards;
+  opacity: 0;
+  width: calc(var(--city-width) * 5); /* 1000vw pour vitesse 1 */
+}
+
+.second-plan {
+  background-image: url("../../public/assets/images/game/Day/SecondPlan.png");
+  z-index: 148;
+  animation: SlideInRight 0.5s 1s ease-out 1 forwards;
+  opacity: 0;
+  width: calc(var(--city-width) * 2.5); /* 500vw pour vitesse 0.5 */
+}
+
+.third-plan {
+  background-image: url("../../public/assets/images/game/Day/ThirdPlan.png");
+  z-index: 147;
+  animation: SlideInLeft 0.5s 1.5s ease-out 1 forwards;
+  opacity: 0;
+  width: var(--city-width); /* 200vw pour vitesse 0.2 */
+}
+
+.fourth-plan {
+  background-image: url("../../public/assets/images/game/Day/FourthPlan.png");
+  z-index: 146;
+  animation: SlideInRight 0.5s 2s ease-out 1 forwards;
+  opacity: 0;
+  width: calc(var(--city-width) * 1.5); /* 300vw pour vitesse 0.3 */
+}
+
+.scrollable-gallery-container {
+  display: flex;
+}
+
+.scrollable-gallery-container .section-gallery-container {
+  display: flex;
+  z-index: 150;
+  justify-content: space-between;
+  height: fit-content;
+  margin-top: 150px;
+  transform: translateX(1900px);
+  width: calc(var(--city-width) * 5);
+}
+
+@keyframes SlideInLeft {
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes SlideInRight {
+  from {
+    transform: translateX(1000px);
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes SlideInTop {
+  from {
+    transform: translateY(-1000px);
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
